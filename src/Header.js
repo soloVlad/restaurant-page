@@ -1,5 +1,5 @@
 import Title from './Title';
-import Menu from './Menu';
+import Nav from './Nav';
 import displayHome from './Home';
 
 function Header() {
@@ -10,14 +10,14 @@ function Header() {
   container.classList.add('container');
 
   const title = new Title({ text: 'Cibo gustoso' });
-  const menu = new Menu([
+  const nav = new Nav([
     { link: '#', text: 'Home', handler: displayHome },
     { link: '#', text: 'Menu', handler() { } },
     { link: '#', text: 'Contacts', handler() { } },
   ]);
 
   container.appendChild(title);
-  container.appendChild(menu);
+  container.appendChild(nav);
   header.appendChild(container);
 
   return header;
