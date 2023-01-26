@@ -12,8 +12,15 @@ function Home() {
   container.appendChild(tagline);
   home.appendChild(container);
 
-  const content = document.querySelector('#content');
-  content.appendChild(home);
+  return home;
 }
 
-export default Home;
+function displayHome() {
+  const content = document.querySelector('#content');
+  if (content.children.length > 1) {
+    content.removeChild(content.lastChild);
+  }
+  content.appendChild(Home());
+}
+
+export default displayHome;

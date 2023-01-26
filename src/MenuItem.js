@@ -9,6 +9,9 @@ function MenuItem(data) {
   menuItemLink.href = data.link;
 
   menuItem.appendChild(menuItemLink);
+
+  menuItem.addEventListener('click', data.handler);
+
   return menuItem;
 }
 

@@ -1,5 +1,5 @@
-import Header from './Header';
-import Home from './Home';
+import displayHeader from './Header';
+import displayHome from './Home';
 
-Header();
-Home();
+displayHeader();
+displayHome();

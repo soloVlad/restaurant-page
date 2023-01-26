@@ -1,5 +1,6 @@
 import Title from './Title';
 import Menu from './Menu';
+import displayHome from './Home';
 
 function Header() {
   const header = document.createElement('header');
@@ -10,17 +11,21 @@ function Header() {
 
   const title = new Title({ text: 'Cibo gustoso' });
   const menu = new Menu([
-    { link: '#', text: 'Home' },
-    { link: '#', text: 'Menu' },
-    { link: '#', text: 'Contacts' },
+    { link: '#', text: 'Home', handler: displayHome },
+    { link: '#', text: 'Menu', handler() { } },
+    { link: '#', text: 'Contacts', handler() { } },
   ]);
 
-  header.appendChild(container);
   container.appendChild(title);
   container.appendChild(menu);
+  header.appendChild(container);
 
-  const content = document.querySelector('#content');
-  content.appendChild(header);
+  return header;
 }
 
-export default Header;
+function displayHeader() {
+  const content = document.querySelector('#content');
+  content.appendChild(Header());
+}
+
+export default displayHeader;
