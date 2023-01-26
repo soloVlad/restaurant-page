@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Elsie', cursive;
+font-family: 'Red Hat Display', sans-serif; */
+
+  --light-green: #CFD2C6;
+  --green: #B7BCA9;
+  --dark-green: #36392D;
+  --white: #CFD2C6;
+}
+
+body {
+  background-color: var(--light-green);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 144rem;
+}
+
+.header {
+  padding: 4rem 8rem;
+  color: var(--dark-green);
+}
+
+.header>.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* to center menu element */
+.header>.container::after {
+  content: '';
+  flex: 1;
+}
+
+.title {
+  flex: 1;
+  font-family: 'Elsie', cursive;
+  font-weight: 900;
+  font-size: 3.2rem;
+}
+
+.menu {
+  display: flex;
+  gap: 5rem;
+  list-style-type: none;
+}
+
+.menu-item {
+  padding: 1.4rem 3.5rem;
+  border: 1px solid var(--green);
+  border-radius: 1.6rem;
+  transition: 0.2s ease-out background-color;
+}
+
+.menu-item:hover {
+  cursor: pointer;
+  background-color: var(--green);
+}
+
+.menu-item-link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: inherit;
+}
+
+.home>.container {
+  height: 100rem;
+  background: url(./assets/img/background.png) no-repeat center center;
+}
