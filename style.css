@@ -9,8 +9,6 @@
 :root {
   font-size: 10px;
   font-family: 'Roboto', sans-serif;
-  /* font-family: 'Elsie', cursive;
-font-family: 'Red Hat Display', sans-serif; */
 
   --light-green: #CFD2C6;
   --green: #B7BCA9;
@@ -76,7 +74,17 @@ body {
   color: inherit;
 }
 
+.home {
+  flex: 1;
+}
+
 .home>.container {
-  height: 100rem;
-  background: url(./assets/img/background.png) no-repeat center center;
+  margin-top: 10%;
+}
+
+.home .tagline {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 700;
+  font-size: 7rem;
+  text-align: center;
 }
