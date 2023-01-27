@@ -14,7 +14,6 @@ function Header() {
   const nav = new Nav([
     { link: '#', text: 'Home', handler: displayHome },
     { link: '#', text: 'Menu', handler: displayMenu },
-    { link: '#', text: 'Contacts', handler() { } },
   ]);
 
   container.appendChild(title);
