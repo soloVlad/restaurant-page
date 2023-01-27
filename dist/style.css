@@ -49,30 +49,33 @@ body {
   font-size: 3.2rem;
 }
 
-.menu {
+.nav {
   display: flex;
   gap: 5rem;
   list-style-type: none;
 }
 
-.menu-item {
+.nav-item {
   padding: 1.4rem 3.5rem;
   border: 1px solid var(--green);
   border-radius: 1.6rem;
   transition: 0.2s ease-out background-color;
 }
 
-.menu-item:hover {
+.nav-item:hover {
   cursor: pointer;
   background-color: var(--green);
 }
 
-.menu-item-link {
+.nav-item-link {
   text-decoration: none;
   font-weight: 500;
   font-size: 1.6rem;
   color: inherit;
 }
+
+
+/* Home */
 
 .home {
   flex: 1;
@@ -87,4 +90,60 @@ body {
   font-weight: 700;
   font-size: 7rem;
   text-align: center;
+}
+
+
+/* Menu */
+
+.menu>.container {
+  margin-top: 5rem;
+  color: var(--dark-green);
+  padding-bottom: 10rem;
+}
+
+.menu-text {
+  margin: 0 auto;
+  max-width: 57rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.menu-list {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.menu-item:hover {
+  cursor: pointer;
+}
+
+.menu-item:hover .menu-item-img {
+  transform: scale(1.02);
+}
+
+.menu-item-img {
+  width: 33rem;
+  transition: 0.2s ease-out all;
+}
+
+.menu-item-name {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.menu-item-price {
+  font-weight: 500;
+  font-size: 1.6rem;
 }

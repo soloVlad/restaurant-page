@@ -1,9 +1,9 @@
-import NavItem from './MenuItem';
+import NavItem from './NavItem';
 
 function Nav(data) {
   const nav = document.createElement('ul');
 
-  nav.classList.add('menu');
+  nav.classList.add('nav');
 
   data.forEach((menuItemData) => {
     const navItem = NavItem(menuItemData);

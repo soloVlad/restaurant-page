@@ -1,6 +1,7 @@
 import Title from './Title';
 import Nav from './Nav';
 import displayHome from './Home';
+import displayMenu from './Menu';
 
 function Header() {
   const header = document.createElement('header');
@@ -12,7 +13,7 @@ function Header() {
   const title = new Title({ text: 'Cibo gustoso' });
   const nav = new Nav([
     { link: '#', text: 'Home', handler: displayHome },
-    { link: '#', text: 'Menu', handler() { } },
+    { link: '#', text: 'Menu', handler: displayMenu },
     { link: '#', text: 'Contacts', handler() { } },
   ]);
 
